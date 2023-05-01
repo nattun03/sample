@@ -109,7 +109,7 @@
 .Footer__copyText {}
 
 /* --- スマホサイズ --- */
-@media(max-width:429px) {
+@media(max-width:459px) {
   .Header__inner {
     background-color: rgb(161, 161, 161);
     display: flex;
