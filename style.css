@@ -65,17 +65,25 @@
 }
 
 .Text {
+  display: flex;
   text-align: center;
-  margin-bottom: 90px;
+  margin: 0 10px 90px;
   font-size: 20px;
   line-height: 1.7;
 }
 
+.br_pc {
+  display: block;
+}
+
+.br_phone {
+  display: none;
+}
 
 /* - - - botton - - - */
 
 .Botton {
-  margin-bottom: 220px;
+  margin-bottom: 100px;
 }
 
 .BottonLink {
@@ -100,3 +108,65 @@
 }
 
 .Footer__copyText {}
+
+/* --- スマホサイズ --- */
+@media(max-width:429px) {
+  .Header__inner {
+    background-color: rgb(161, 161, 161);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+    position: fixed;
+    width: 100vw;
+  }
+
+  .Header__logo {
+    font-size: 30px;
+    margin: 0 0 0 40px;
+  }
+
+  .Header__nav {
+    display: flex;
+    margin: 0 5px 0 0;
+  }
+
+  .Mv__image {
+    width: 100vw;
+    margin: 80px 0;
+  }
+
+  .Title {
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 50px;
+  }
+
+  .Text {
+    text-align: center;
+    margin-bottom: 50px;
+    font-size: 15px;
+    line-height: 1.7;
+  }
+
+  .br_pc {
+    display: none;
+  }
+
+  .br_phone {
+    display: block;
+  }
+
+  .BottonLink {
+    background-color: dimgray;
+    color: #fff;
+    display: block;
+    width: 30vw;
+    height: 60px;
+    line-height: 60px;
+    margin: 0 auto;
+    text-align: center;
+    text-decoration: none;
+  }
+}
