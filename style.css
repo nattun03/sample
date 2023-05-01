@@ -1,0 +1,102 @@
+/* - - - - - - - - - - - - - - -　
+　　　　TOPページ
+- - - - - - - - - - - - - - - */
+
+.Page {}
+
+/* - - - header - - -  */
+
+.Header {}
+
+.Header__inner {
+  background-color: rgb(161, 161, 161);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 80px;
+  position: fixed;
+  width: 100%;
+}
+
+
+.Header__logo {
+  font-size: 50px;
+  margin: 0 0 0 40px;
+}
+
+.Header__logoLink {}
+
+.Header__nav {
+  display: flex;
+  margin: 0 40px 0 0;
+}
+
+.Header__navList {
+  display: flex;
+  align-items: center;
+  margin: 0 45px 0 0;
+}
+
+.Header__navItem {}
+
+.Header__navLink {}
+
+/* - - - MV - - - */
+
+.Mv {}
+
+.Mv__image {
+  margin-bottom: 220px;
+}
+
+/* - - - content - - - */
+
+.Content {}
+
+.Content__inner {}
+
+.Content {}
+
+.Title {
+  font-size: 40px;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 90px;
+}
+
+.Text {
+  text-align: center;
+  margin-bottom: 90px;
+  font-size: 20px;
+  line-height: 1.7;
+}
+
+
+/* - - - botton - - - */
+
+.Botton {
+  margin-bottom: 220px;
+}
+
+.BottonLink {
+  display: block;
+  width: 400px;
+  height: 60px;
+  line-height: 60px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* - - - footer - - - */
+
+.Footer {}
+
+.Footer__inner {}
+
+.Footer__logo {}
+
+.Footer__copy {
+  text-align: center;
+}
+
+.Footer__copyText {}
