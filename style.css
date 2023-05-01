@@ -65,9 +65,8 @@
 }
 
 .Text {
-  display: flex;
   text-align: center;
-  margin: 0 10px 90px;
+  margin-bottom: 90px;
   font-size: 20px;
   line-height: 1.7;
 }
