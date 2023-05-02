@@ -24,7 +24,14 @@
   margin: 0 0 0 40px;
 }
 
-.Header__logoLink {}
+.Header__logoLink {
+  color: #fff;
+  text-decoration: none;
+}
+
+#menu-btn-check {
+  display: none;
+}
 
 .Header__nav {
   display: flex;
@@ -165,11 +172,6 @@
     top: 8px;
   }
 
-  /* チェックボックスを非表示にする */
-  #menu-btn-check {
-    display: none;
-  }
-
   #menu-btn-check:checked~.menu-btn span {
     background-color: rgba(255,
         255,
@@ -190,8 +192,8 @@
   }
 
   /* =================
-  メニュー部分の実装
-  ================= */
+メニュー部分の実装
+================= */
 
   .Header__nav {
     width: 80%;
@@ -226,15 +228,16 @@
     position: relative;
   }
 
-  #menu-btn-check:checked~.menu-content {
+  #menu-btn-check:checked~.Header__nav {
     left: 30%;
+    z-index: 90;
     /*メニューを画面内へ動かす*/
   }
 
   /* ------------------------------------------- */
 
   .Mv__image {
-    width: 100vw;
+    width: 100%;
     margin: 80px 0;
   }
 
