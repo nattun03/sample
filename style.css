@@ -46,7 +46,8 @@
 .Mv {}
 
 .Mv__image {
-  margin-bottom: 220px;
+  width: 100vw;
+  margin: 80px 0;
 }
 
 /* - - - content - - - */
@@ -69,14 +70,6 @@
   margin-bottom: 90px;
   font-size: 20px;
   line-height: 1.7;
-}
-
-.br_pc {
-  display: block;
-}
-
-.br_phone {
-  display: none;
 }
 
 /* - - - botton - - - */
@@ -104,6 +97,8 @@
 
 .Footer__copy {
   text-align: center;
+  background-color: rgb(161, 161, 161);
+  height: 20px;
 }
 
 .Footer__copyText {}
@@ -125,10 +120,118 @@
     margin: 0 0 0 40px;
   }
 
-  .Header__nav {
+  /* .Header__nav {
     display: flex;
     margin: 0 5px 0 0;
+  } */
+
+  /* =================ハンバーガーボタンの実装================= */
+
+  .menu-btn {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    display: flex;
+    height: 60px;
+    width: 60px;
+    justify-content: center;
+    align-items: center;
+    z-index: 90;
+    background-color: black;
   }
+
+  .menu-btn:hover {
+    cursor: pointer;
+  }
+
+  /* 三本線の実装 */
+  .menu-btn span,
+  .menu-btn span:before,
+  .menu-btn span:after {
+    content: "";
+    display: block;
+    height: 3px;
+    width: 25px;
+    border-radius: 3px;
+    background-color: #ffffff;
+    position: absolute;
+  }
+
+  .menu-btn span:before {
+    bottom: 8px;
+  }
+
+  .menu-btn span:after {
+    top: 8px;
+  }
+
+  /* チェックボックスを非表示にする */
+  #menu-btn-check {
+    display: none;
+  }
+
+  #menu-btn-check:checked~.menu-btn span {
+    background-color: rgba(255,
+        255,
+        255,
+        0);
+    /*メニューオープン時は真ん中の線を透明にする*/
+  }
+
+  /* メニューを開いている時はハンバーガーボタンが×になる */
+  #menu-btn-check:checked~.menu-btn span::before {
+    bottom: 0;
+    transform: rotate(45deg);
+  }
+
+  #menu-btn-check:checked~.menu-btn span::after {
+    top: 0;
+    transform: rotate(-45deg);
+  }
+
+  /* =================
+  メニュー部分の実装
+  ================= */
+
+  .Header__nav {
+    width: 80%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    /* メニューを外に出しておく */
+    left: 100%;
+    z-index: 80;
+    background-color: black;
+    transition: all 0.5s;
+    /*アニメーションを滑らかにする*/
+  }
+
+  .Header__navList {
+    padding: 70px 10px 0;
+  }
+
+  .Header__navItem {
+    border-bottom: solid 1px #ffffff;
+    list-style: none;
+  }
+
+  .Header__navLink {
+    display: block;
+    width: 100%;
+    font-size: 15px;
+    box-sizing: border-box;
+    color: #ffffff;
+    text-decoration: none;
+    padding: 9px 15px 10px 0;
+    position: relative;
+  }
+
+  #menu-btn-check:checked~.menu-content {
+    left: 30%;
+    /*メニューを画面内へ動かす*/
+  }
+
+  /* ------------------------------------------- */
 
   .Mv__image {
     width: 100vw;
@@ -149,11 +252,11 @@
     line-height: 1.7;
   }
 
-  .br_pc {
+  br {
     display: none;
   }
 
-  .br_phone {
+  span {
     display: block;
   }
 
